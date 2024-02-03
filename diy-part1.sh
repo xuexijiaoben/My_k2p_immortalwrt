@@ -26,6 +26,20 @@ git_sparse_clone https://github.com/coolsnowwolf/lede lede package/lean/mt/mtkia
 
 # Add a feed source
 
-
 # echo '添加omcproxy软件源'
 git clone -b 18.06 https://github.com/riverscn/luci-app-omcproxy.git package/luci-app-omcproxy
+
+git clone -b master --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/app/luci-app-unblockneteasemusic
+git clone --depth 1 https://github.com/ilxp/luci-app-ikoolproxy.git package/app/luci-app-ikoolproxy
+
+./scripts/feeds update -a
+./scripts/feeds install -a
+
+# echo '### Argon Theme Config ###'
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config # if have
+git clone https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
+
+./scripts/feeds update -a
+./scripts/feeds install -a
