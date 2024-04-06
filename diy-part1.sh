@@ -22,7 +22,7 @@ function git_sparse_clone() {
 }
 
 # Add mtkiappd support for 802.11 k/v/r
-git_sparse_clone https://github.com/coolsnowwolf/lede lede package/lean/mt/mtkiappd package/kernel/mt-drivers/mtkiappd
+# git_sparse_clone https://github.com/coolsnowwolf/lede lede package/lean/mt/mtkiappd package/kernel/mt-drivers/mtkiappd
 
 # Add a feed source
 
@@ -38,7 +38,7 @@ git clone --depth 1 https://github.com/ilxp/luci-app-ikoolproxy.git package/app/
 # echo '### Argon Theme Config ###'
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config # if have
+rm -rf feeds/luci/applications/luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
 
 ./scripts/feeds update -a
