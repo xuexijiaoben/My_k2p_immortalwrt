@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: k2p_immortalwrt
+name: k2p_immortalwrt_21.02
 
 on:
   repository_dispatch:
