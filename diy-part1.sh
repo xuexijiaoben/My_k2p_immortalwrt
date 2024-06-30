@@ -57,12 +57,11 @@ function merge_package() {
 # git clone -b master --depth 1 https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/app/luci-app-unblockneteasemusic
 git clone --depth 1 https://github.com/ilxp/luci-app-ikoolproxy.git package/app/luci-app-ikoolproxy
 
-merge_package master https://github.com/coolsnowwolf/luci package/app applications/luci-app-easymesh
-
 ./scripts/feeds update -a
 
 merge_package openwrt-23.05 https://github.com/coolsnowwolf/luci feeds/luci/applications applications/luci-app-pppwn
 merge_package master https://github.com/coolsnowwolf/packages feeds/packages/multimedia multimedia/pppwn-cpp
+merge_package master https://github.com/coolsnowwolf/luci feeds/luci/applications applications/luci-app-easymesh
 
 ./scripts/feeds install -a
 
