@@ -63,6 +63,13 @@ merge_package openwrt-23.05 https://github.com/coolsnowwolf/luci feeds/luci/appl
 merge_package master https://github.com/coolsnowwolf/packages feeds/packages/multimedia multimedia/pppwn-cpp
 merge_package master https://github.com/coolsnowwolf/luci feeds/luci/applications applications/luci-app-easymesh
 
+# fix : ubus_call_umdns()=ubus.c@1385
+rm package/network/services/umdns/files/umdns.init
+rm package/network/services/umdns/files/umdns.json
+wget -P package/network/services/umdns/files https://raw.githubusercontent.com/openwrt/openwrt/main/package/network/services/umdns/files/umdns.init
+wget -P package/network/services/umdns/files https://raw.githubusercontent.com/openwrt/openwrt/main/package/network/services/umdns/files/umdns.json
+
+
 ./scripts/feeds install -a
 
 # 修复feeds错误
