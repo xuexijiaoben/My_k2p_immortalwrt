@@ -44,7 +44,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  OPENWRT_TAG: k2p_immortalwrt_23.05
+  OPENWRT_TAG: k2p_23.05
 jobs:
   build:
     runs-on: ubuntu-22.04
