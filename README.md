@@ -1,3 +1,5 @@
+luci-app-ikoolproxy 不支持 OpenWrt23.05的nftables
+
 https://github.com/KevinMX/Railgun
 
 https://github.com/smsmail2022/actions-immortalwrt-mtk-sdk-phicomm-k2p
